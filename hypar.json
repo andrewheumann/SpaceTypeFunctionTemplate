@@ -1,0 +1,44 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "5a5bc817-8851-4430-902c-b7bce0417bca",
+  "name": "Space Type Function Template",
+  "description": "Creates a SPACE_TYPE.",
+  "model_dependencies": [
+    {
+      "autohide": false,
+      "name": "Space Planning Zones",
+      "optional": false
+    },
+    {
+      "autohide": false,
+      "name": "Levels",
+      "optional": true
+    }
+  ],
+  "model_output": "SPACE_TYPE Layout",
+  "language": "C#",
+  "overrides": {
+    "Furniture Locations": {
+      "context": "[*discriminator=Elements.ElementInstance]",
+      "identity": {
+        "OriginalLocation": {
+          "$ref": "https://hypar.io/Schemas/Geometry/Vector3.json"
+        },
+        "gltfLocation": {
+          "type": "string"
+        }
+      },
+      "schema": {
+        "Transform": {
+          "$ref": "https://prod-api.hypar.io/schemas/Transform"
+        }
+      }
+    }
+  },
+  "element_types": [
+    "http://prod-api.hypar.io/schemas/LevelElements",
+    "http://prod-api.hypar.io/schemas/SpaceBoundary",
+    "http://prod-api.hypar.io/schemas/LevelVolume"
+  ],
+  "cli_version": "1.2.0-alpha.8"
+}

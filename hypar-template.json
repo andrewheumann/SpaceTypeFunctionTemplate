@@ -1,0 +1,26 @@
+{
+    "prompts": [
+        {
+            "prompt": "What is the name of this space type? (e.g. 'Open Office', 'Meeting Room', 'Reception')",
+            "type": "code-string",
+            "key": "SPACE_TYPE"
+        },
+        {
+            "prompt": "Enter the URL or path of the content catalog file.",
+            "type": "file-copy",
+            "key": "CONTENT_CATALOG_PATH",
+            "destination": "catalog.json"
+        },
+        {
+            "prompt": "Enter the URL or path of the content configuration file.",
+            "type": "file-copy",
+            "key": "CONTENT_CONFIGURATION_PATH",
+            "destination": "config.json"
+        },
+        {
+            "prompt": "Does this space type produce walls?",
+            "type": "code-boolean",
+            "key": "SHOULD_CREATE_WALLS"
+        }
+    ]
+}
